@@ -1,37 +1,109 @@
+:root {
+  --primary-color: #0077ff;
+  --secondary-color: #f0f4f8;
+  --accent-color: #e0e0e0;
+  --background-color: #ffffff;
+  --font-color: #333;
+  --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --border-radius: 10px;
+  --transition: all 0.3s ease;
+  --font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--secondary-color);
+  font-family: var(--font-family);
+  color: var(--font-color);
+  line-height: 1.6;
+}
+
 .container {
-  max-width: 600px;
-  margin: auto;
-  padding: 1rem;
-  font-family: sans-serif;
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--primary-color);
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
-input, textarea, select, button {
-  padding: 8px;
+input, textarea, select {
+  padding: 12px;
   font-size: 1rem;
+  border: 1px solid var(--accent-color);
+  border-radius: var(--border-radius);
+  background-color: #fff;
+  transition: var(--transition);
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.2);
+  outline: none;
+}
+
+button, .send-button {
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+button:hover, .send-button:hover {
+  background-color: #005edc;
 }
 
 ul {
   list-style: none;
   padding: 0;
+  margin-top: 2rem;
 }
 
 li {
-  border: 1px solid #ccc;
-  padding: 10px;
+  background: #fff;
+  border: 1px solid var(--accent-color);
+  padding: 15px;
   margin-top: 10px;
-  background: #f9f9f9;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: var(--transition);
 }
 
-.send-button {
-  background-color: #0077ff;
-  color: white;
+li:hover {
+  transform: translateY(-2px);
+}
+
+.delete-button {
+  align-self: flex-end;
+  background-color: #ff4d4d;
+  color: #fff;
   border: none;
-  padding: 10px;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
   cursor: pointer;
+  transition: var(--transition);
+}
+
+.delete-button:hover {
+  background-color: #d93636;
 }
