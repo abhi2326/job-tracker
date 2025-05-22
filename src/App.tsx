@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-
+import "./styles.css";
 const SERVICE_ID = "service_t2fsozo";
 const TEMPLATE_ID = "template_aepvo66";
 const USER_ID = "nBpVQK5B0LisYKp9E";
